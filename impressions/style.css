@@ -1,0 +1,34 @@
+.containernavs{
+margin-top: 1rem;
+display: flex;
+}
+
+.col-sm{
+  margin-bottom: 1.5rem;
+}
+
+a:hover,
+a:focus {
+  text-decoration: none;
+}
+.jumbotron{
+  background-color: none !important;
+  padding: 2rem 0;
+  width: 100%;
+}
+.nav-menu{
+   position: fixed;
+   background-color: var(--body-color);
+   top: -100%;
+   left: 0;
+   width: 100%;
+   padding: 4rem 0;
+   border-radius: 0 0 1.5rem 1.5rem;
+   box-shadow: 0 1px 4px hsla(0, 4%, 15%, .1);
+   transition: .4s;
+   z-index: inherit top;
+}
+
+.nav{
+  width: 100%;
+}

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="../assets/img/favicon.png" type="image/x-icon">
+  <link rel="stylesheet" href="../assets/css/swiper-bundle.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+  <title>Flashcards</title>
+</head>
+</head>
+
+<body>
+  <!--==================== HEADER ====================-->
+  <header class="header" id="header">
+    <nav class="nav container">
+      <a href="../index.html" class="nav__logo">
+        <img src="../assets/img/logo.png" alt="" class="nav__logo-img">
+        Study
+      </a>
+      <div class="containernav">
+        <div class="nav__menu" id="nav-menu">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="../flashcards/index.html" class="nav__link active-link">Cards</a>
+            </li>
+            <li class="nav__item">
+              <a href="../todo/index.html" class="nav__link">To Do</a>
+            </li>
+            <li class="nav__item">
+              <a href="../calculator-main/index.html" class="nav__link">Calculator</a>
+            </li>
+            <li class="nav__item">
+              <a href="../impressions/index.html" class="nav__link ">Views</a>
+            </li>
+
+            <div class="nav__close" id="nav-close">
+              <i class='bx bx-x'></i>
+            </div>
+
+            <li>
+              <!-- Theme change button -->
+              <i class='bx bx-moon change-theme' id="theme-button"></i></li>
+            </li>
+
+
+            <img src="../assets/img/nav-light.png" alt="" class="nav__img">
+        </div>
+        <div class="nav__btns">
+
+
+          <!-- Toggle button -->
+          <div class="nav__toggle" id="nav-toggle">
+            <i class='bx bx-grid-alt'></i>
+          </div>
+        </div>
+        </ul>
+    </nav>
+  </header>
+
+
+  <main>
+    <div class="divs">
+      <div class="text"><a href="./index.html">
+          <h1 class="texts">Flashcards</h1>
+        </a>
+      </div>
+      <br>
+      <div class="carts">
+        <button id="show_card_box">Add Card</button>
+        <button id="delete_cards">Delete Cards</button>
+      </div>
+    </div>
+    </div>
+
+    <section>
+      <div class="containers">
+        <div id="create_card">
+          <h2>Create Flashcard</h2>
+          <label for="question">Question</label>
+          <textarea id="question" maxlength="280"></textarea>
+          <label for="answer" maxlength="280">Answer</label>
+          <br>
+          <textarea id="answer"></textarea>
+          <div>
+            <button id="save_card">Save</button> <button id="close_card_box">Close</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="containers">
+        <div id="flashcards"></div>
+      </div>
+    </section>
+  </main>
+  <div class="footersize">
+    <div class="footertodo">
+      <footer class="footer section">
+        <div class="footer__container container grid">
+          <div>
+            <a href="../index.html" class="footer__logo">
+              <img src="../assets/img/logo.png" alt="" class="footer__logo-img">
+              Study
+            </a>
+
+            <p class="footer__description">
+              Study help <br> for everyone!
+            </p>
+          </div>
+
+          <div>
+            <h3 class="footer__title">Our Services</h3>
+            <ul class="footer__links">
+              <li>
+                <a href="../flashcards/index.html" class="footer__link active-links">Cards</a>
+              </li>
+              <li>
+                <a href="../todo/index.html" class="footer__link">To Do</a>
+              </li>
+              <li>
+                <a href="../calculator-main/index.html" class="footer__link">Calculator</a>
+              </li>
+              <li>
+                <a href="../impressions/index.html" class="footer__link">Views</a>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="footer__title">Support</h3>
+
+            <ul class="footer__links">
+              <li>
+                <a href="../faq/index.html" class="footer__link">FAQs</a>
+              </li>
+              <li>
+                <a href="../www/index.html" class="footer__link">Sign up</a>
+              </li>
+            </ul>
+          </div>
+          <img src="../assets/img/footer2.png" alt="" class=" footer__img1">
+          <img src="../assets/img/footer1.png" alt="" class="footer__img2">
+        </div>
+    </div>
+    <span class="footer__copy"></span>
+    </footer>
+  </div>
+  <script src="script.js"></script>
+
+  <!--=============== SCROLL REVEAL ===============-->
+  <script src="../assets/js/scrollreveal.min.js"></script>
+
+
+  <!--=============== SWIPER JS ===============-->
+  <script src="../assets/js/swiper-bundle.min.js"></script>
+
+  <!--=============== MAIN JS ===============-->
+  <script src="../assets/js/main.js"></script>
+
+
+</body>
+
+</html>

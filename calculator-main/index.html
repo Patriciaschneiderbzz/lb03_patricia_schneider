@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" href="../assets/img/favicon.png" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../assets/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+</head>
+
+<body>
+    <!--==================== HEADER ====================-->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="../index.html" class="nav__logo">
+                <img src="../assets/img/logo.png" alt="" class="nav__logo-img">
+                Study
+            </a>
+
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="../flashcards/index.html" class="nav__link ">Cards</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="../todo/index.html" class="nav__link">To Do</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="../calculator-main/index.html" class="nav__link active-link">Calculator</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="../impressions/index.html" class="nav__link ">Views</a>
+                    </li>
+
+                    <div class="nav__close" id="nav-close">
+                        <i class='bx bx-x'></i>
+                    </div>
+
+                    <li>
+                        <!-- Theme change button -->
+                        <i class='bx bx-moon change-theme' id="theme-button"></i>
+                    </li>
+
+
+                    <img src="../assets/img/nav-light.png" alt="" class="nav__img">
+            </div>
+            <div class="nav__btns">
+
+
+
+                <!-- Toggle button -->
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class='bx bx-grid-alt'></i>
+                </div>
+                </ul>
+        </nav>
+    </header>
+
+    <!--==================== MAIN ====================-->
+    <main class="main">
+        <h1 class="center">Calculator</h1>
+        <div class="giving__contents">
+
+
+
+            <div id="resultArea"></div>
+
+
+            <table>
+                <tr>
+                    <td onclick="deleteAll()">AC</td>
+                    <td></td>
+                    <td></td>
+                    <td onclick="deleteLast()">DEL</td>
+
+                </tr>
+                <tr>
+                    <td onclick="appendOperation(7)">7</td>
+                    <td onclick="appendOperation(8)">8</td>
+                    <td onclick="appendOperation(9)">9</td>
+                    <td onclick="appendOperation(' / ')" class="highlight">/</td>
+                </tr>
+
+
+                <tr>
+                    <td onclick="appendOperation(4)">4</td>
+                    <td onclick="appendOperation(5)">5</td>
+                    <td onclick="appendOperation(6)">6</td>
+                    <td onclick="appendOperation(' * ')" class="highlight">x</td>
+                </tr>
+
+                <tr>
+                    <td onclick="appendOperation(1)">1</td>
+                    <td onclick="appendOperation(2)">2</td>
+                    <td onclick="appendOperation(3)">3</td>
+                    <td onclick="appendOperation(' + ')" class="highlight">+</td>
+                </tr>
+
+
+                <tr>
+                    <td onclick="appendOperation(0)">0</td>
+                    <td onclick="appendOperation('.')">,</td>
+                    <td onclick="calculateResult()" id="result">=</td>
+                    <td onclick="appendOperation(' - ')" class="highlight">-</td>
+                </tr>
+            </table>
+            <div class="footersize">
+                <div class="footertodo">
+                    <footer class="footer section">
+                        <div class="footer__container container grid">
+                            <div>
+                                <a href="../index.html" class="footer__logo">
+                                    <img src="../assets/img/logo.png" alt="" class="footer__logo-img">
+                                    Study
+                                </a>
+
+                                <p class="footer__description">
+                                    Study help <br> for everyone!
+                                </p>
+                            </div>
+
+                            <div>
+                                <h3 class="footer__title">Our Services</h3>
+
+                                <ul class="footer__links">
+                                    <li>
+                                        <a href="../flashcards/index.html" class="footer__link">Cards</a>
+                                    </li>
+                                    <li>
+                                        <a href="../todo/index.html" class="footer__link">To Do</a>
+                                    </li>
+                                    <li>
+                                        <a href="../calculator-main/index.html"
+                                            class="footer__link active-links">Calculator</a>
+                                    </li>
+                                    <li>
+                                        <a href="../impressions/index.html" class="footer__link">Views</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h3 class="footer__title">Support</h3>
+
+                                <ul class="footer__links">
+                                    <li>
+                                        <a href="../faq/index.html" class="footer__link">FAQs</a>
+                                    </li>
+                                    <li>
+                                        <a href="../www/index.html" class="footer__link">Sign up</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <img src="../assets/img/footer2.png" alt="" class=" footer__img1">
+                            <img src="../assets/img/footer1.png" alt="" class="footer__img2">
+                        </div>
+
+                        <span class="footer__copy"></span>
+                    </footer>
+                </div>
+            </div>
+</body>
+</script>
+<script src="./main.js"></script>
+
+<!--=============== SCROLL REVEAL JS ===============-->
+<script src="../assets/js/scrollreveal.min.js"></script>
+
+<!--=============== SWIPER JS ===============-->
+<script src="../assets/js/swiper-bundle.min.js"></script>
+
+<!--=============== MAIN JS ===============-->
+<script src="../assets/js/main.js"></script>
+
+</html>
