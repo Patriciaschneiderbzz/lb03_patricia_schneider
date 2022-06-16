@@ -1,0 +1,560 @@
+body {
+    flex-wrap: wrap;
+}
+
+.pagewidth{
+    justify-content: center;
+    padding-top: 50px;
+}
+
+.forms {
+    padding: 20px 40px;
+}
+
+.form-control {
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    position: relative;
+}
+
+.form-control lable {
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+.form-control input {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    border: 2px solid #d8d1d1;
+}
+
+.form-control.success input {
+    border: 2px solid rgb(26, 167, 26);
+}
+
+.form-control.error input {
+    border: 2px solid rgb(228, 29, 22);
+}
+
+.form-control small {
+    position: absolute;
+    margin: 3px;
+    visibility: hidden;
+}
+
+button {
+    background-color: hsl(355, 66%, 50%);
+    color: #fff;
+    padding: 10px 20px;
+    width: 100%;
+    margin-top: 10px;
+    border-radius: 4px;
+    border: 2px solid hsl(355, 66%, 50%);
+    cursor: pointer;
+}
+.center {
+    text-align: center;
+    padding-top: 50px;
+}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+.container{
+    padding-top: 30px;
+}
+
+
+.containercard{
+    min-height: 100vh;
+    background: rgb(228, 222, 222);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    
+}
+
+.container form {
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, .1);
+    padding: 20px;
+    
+    padding-top: 160px;
+}
+
+.container form .inputBox {
+    margin-top: 20px;
+}
+
+.container form .inputBox span {
+    display: block;
+    color: #999;
+    padding-bottom: 5px;
+}
+
+.container form .inputBox input,
+.container form .inputBox select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, .3);
+    color: #444;
+}
+
+.container form .flexbox {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.container form .flexbox .inputBox {
+    flex: 1 1 150px;
+}
+
+.container form .submit-btn {
+    width: 100%;
+    background: linear-gradient(45deg, blueviolet, deeppink);
+    margin-top: 20px;
+    padding: 10px;
+    font-size: 20px;
+    color: #fff;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .2s linear;
+}
+
+.container form .submit-btn:hover {
+    letter-spacing: 2px;
+    opacity: .8;
+}
+
+.container .card-container {
+    margin-bottom: -150px;
+    position: relative;
+    height: 250px;
+    width: 400px;
+
+}
+
+.container .card-container .front {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: linear-gradient(45deg, blueviolet, deeppink);
+    border-radius: 5px;
+    backface-visibility: hidden;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, .2);
+    padding: 20px;
+    transform: perspective(1000px) rotateY(0deg);
+    transition: transform .4s ease-out;
+}
+
+.container .card-container .front .image {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 10px;
+}
+
+.container .card-container .front .image img {
+    height: 50px;
+}
+
+.container .card-container .front .card-number-box {
+    padding: 30px 0;
+    font-size: 22px;
+    color: #fff;
+}
+
+.container .card-container .front .flexbox {
+    display: flex;
+}
+
+.container .card-container .front .flexbox .box:nth-child(1) {
+    margin-right: auto;
+}
+
+.container .card-container .front .flexbox .box {
+    font-size: 15px;
+    color: #fff;
+}
+
+.container .card-container .back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(45deg, blueviolet, deeppink);
+    border-radius: 5px;
+    padding: 20px 0;
+    text-align: right;
+    backface-visibility: hidden;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, .2);
+    transform: perspective(1000px) rotateY(180deg);
+    transition: transform .4s ease-out;
+}
+
+.container .card-container .back .stripe {
+    background: #000;
+    width: 100%;
+    margin: 10px 0;
+    height: 50px;
+}
+
+.container .card-container .back .box {
+    padding: 0 20px;
+}
+
+.container .card-container .back .box span {
+    color: #fff;
+    font-size: 15px;
+}
+
+.container .card-container .back .box .cvv-box {
+    height: 50px;
+    padding: 10px;
+    margin-top: 5px;
+    color: #333;
+    background: #fff;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.container .card-container .back .box img {
+    margin-top: 30px;
+    height: 30px;
+}
+
+.containercreditcard{
+    padding: 20px 40px;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+.drop_box {
+    margin: 10px 0;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border: 3px dotted #a3a3a3;
+    border-radius: 5px;
+}
+
+.drop_box h4 {
+    font-size: 16px;
+    font-weight: 400;
+    color: #2e2e2e;
+}
+
+.drop_box p {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-size: 12px;
+    color: #a3a3a3;
+}
+
+.btn {
+    text-decoration: none;
+    background-color: hsl(355, 66%, 50%);
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    text-decoration: none;
+    background-color: #ffffff;
+    color: hsl(355, 66%, 50%);
+    padding: 10px 20px;
+    border: none;
+    outline: 1px solid #010101;
+}
+
+.form input {
+    margin: 10px 0;
+    width: 100%;
+    background-color: #e2e2e2;
+    border: none;
+    outline: none;
+    padding: 12px 20px;
+    border-radius: 4px;
+}
+h3{
+    text-align: center
+}
+
+.demografisch{
+    padding: 20px 40px;
+    grid-row: 3;
+    display: flex;
+    justify-self:self-end;
+justify-content: space-between;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --success-color: #2ecc71;
+    --error-color: #e74c3c;
+    --checkmark-color: #43b324;
+}
+
+body {
+    background-color: #f9f8fb;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 70px;
+}
+
+.containerdata {
+    background-color: #fff;
+    border-radius: 20px;
+    margin-top: -40px;
+    box-shadow: 0 15px 16.83px 0.17px rgba(0, 0, 0, .05);
+    -webkit-box-shadow: 0 15px 16.83px 0.17px rgba(0, 0, 0, .05);
+    width: 900px;
+    max-width: 1200px;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+h2 {
+    font-size: 36px;
+    font-weight: 700;
+    color: #222;
+    margin: 0 0 30px;
+}
+
+.column2 .signup-image {
+    height: 50%;
+    width: 103%;
+}
+
+.column2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form {
+    padding: 30px 50px;
+}
+
+.form-control {
+    margin-bottom: 10px;
+    padding-bottom: 25px;
+    position: relative;
+}
+
+.form-control label {
+    color: #333;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-control input {
+    font-family: 'Poppins', sans-serif;
+    border: 1px solid #e6e6e6;
+    border-radius: 4px;
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+}
+
+.form-control:after {
+    content: '\2713';
+    font-size: 1.5rem;
+    opacity: 0;
+    color: var(--checkmark-color);
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-30%);
+    transition: all ease .4s;
+}
+
+.form-control input:focus {
+    outline: none;
+    border-color: #777;
+}
+
+.form-control.success input {
+    border-color: var(--success-color);
+}
+
+.form-control.error input {
+    border-color: var(--error-color);
+}
+
+.form-control.success:after {
+    opacity: 1;
+    transform: translateY(-50%);
+}
+
+.form-control small {
+    color: var(--error-color);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    visibility: hidden;
+}
+
+.form-control.error small {
+    visibility: visible;
+}
+
+button {
+    cursor: pointer;
+    background: #050221;
+    border: none;
+    border-radius: 5px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    color: #fff;
+    display: inline-block;
+    font-size: 16px;
+    padding: 10px 39px;
+    margin-top: 20px;
+    transition: all ease .25s;
+}
+
+button:hover {
+    color: white;
+    background: hsl(355, 66%, 50%);
+}
+
+@media screen and (max-width: 860px) {
+    body {
+        padding: 80px;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+    .column1,
+    .column2 {
+        width: auto;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    h2 {
+        font-size: 25px;
+    }
+
+    .form-control input {
+        font-size: 12px;
+        padding: 5px;
+    }
+
+    button {
+        padding: 10px 25px;
+        font-size: 14px;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    .form {
+        padding: 30px 20px;
+    }
+
+    .form-control {
+        margin-bottom: 5px;
+        padding-bottom: 15px;
+    }
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+.containerfile {
+    height: 40vh;
+    width: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    background-color: #fcfcfc;
+    padding: 20px 80px;
+}
+
+.cardfile {
+    border-radius: 10px;
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3);
+    width: 100%;
+    height: 300px;
+    background-color: #ffffff;
+    padding: 10px 30px 60px;
+    margin-top: 50px;
+}
+
+.cardfile h3 {
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.drop_box {
+    margin: 10px 0;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border: 3px dotted #a3a3a3;
+    border-radius: 5px;
+}
+
+.drop_box h4 {
+    font-size: 16px;
+    font-weight: 400;
+    color: #2e2e2e;
+}
+
+.drop_box p {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-size: 12px;
+    color: #a3a3a3;
+}
+
+.btn {
+    text-decoration: none;
+    background-color: #005af0;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    text-decoration: none;
+    background-color: #ffffff;
+    color: #005af0;
+    padding: 10px 20px;
+    border: none;
+    outline: 1px solid #010101;
+}

@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" href="../../assets/img/favicon.png" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login & Registration Page</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link href="./style.css" rel="stylesheet" />
+    <link href="../../assets/css/styles.css" rel="stylesheet" />
+    <link href="../../assets/css/swiper-bundle.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+</head>
+
+<body>
+    <!--==================== HEADER ====================-->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="../../index.html" class="nav__logo">
+                <img src="../../assets/img/logo.png" alt="" class="nav__logo-img">
+                Study
+            </a>
+            <div class="containernav">
+                <ul class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li class="nav__item">
+                            <a href="../../flashcards/index.html" class="nav__link ">Cards</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="../../todo/index.html" class="nav__link">To Do</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="../../calculator-main/index.html" class="nav__link">Calculator</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="../../impressions/index.html" class="nav__link ">Views</a>
+                        </li>
+                        <div class="nav__close" id="nav-close">
+                            <i class='bx bx-x'></i>
+                        </div>
+                        <li>
+                            <!-- Theme change button -->
+                            <i class='bx bx-moon change-theme' id="theme-button"></i></li>
+                        </li>
+                        <img src="../../assets/img/nav-light.png" alt="" class="nav__img">
+                    </ul>
+                    <div class="nav__btns">
+
+                        <!-- Toggle button -->
+                        <div class="nav__toggle" id="nav-toggle">
+                            <i class='bx bx-grid-alt'></i>
+                        </div>
+                    </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Formular -->
+    <div class="containerdata">
+        <div class="column1">
+            <form id="form" class="form">
+                <h2>Form Validation With JS</h2>
+                <div class="form-control">
+                    <label for='username'>Username</label>
+                    <input type="text" id="username" placeholder="Enter your username">
+                    <small>Error message</small>
+                </div>
+
+                <!-- Email -->
+                <div class="form-control">
+                    <label for='email'>Email</label>
+                    <input type="text" id="email" placeholder="Enter your email">
+                    <small>Error message</small>
+                </div>
+
+                <!-- Firstname -->
+                <div class="form-control">
+                    <label for="firstname">Firstname</label>
+                    <input type="text" id="firstname" placeholder="Enter your firstname" />
+                    <small>Error message</small>
+                </div>
+
+                <!-- Phone -->
+                <div class="form-control">
+                    <label for='telefon'>Phone</label>
+                    <input type="tel" id="telefon" placeholder="Enter your phonenumber">
+                    <small>Error message</small>
+                </div>
+
+                <!-- password -->
+                <div class="form-control">
+                    <label for='password'>Password</label>
+                    <input type="password" id="password" placeholder="Enter your password">
+                    <small>Error message</small>
+                </div>
+
+                <!-- Confirm Password -->
+                <div class="form-control">
+                    <label for='passwordRepeat'>Confirm Password</label>
+                    <input type="password" id="passwordRepeat" placeholder="Enter your password again ">
+                    <small>Error message</small>
+                </div>
+                <button>Login</button>
+            </form>
+        </div>
+
+        <!-- Credit Card -->
+        <div class="containercreditcard">
+            <div class="container">
+                <h2>Additional Data</h2>
+                <div class="card-container">
+                    <div class="frontcreditcard">
+                        <div class="front">
+                            <div class="image">
+                                <img src="./assets/chip.png" alt="">
+                                <img src="./assets/visa.png" alt="">
+                            </div>
+                            <!-- Credit Card Number-->
+                            <div class=" card-number-box">################</div>
+                            <div class="flexbox">
+                                <div class="box">
+                                    <span>card holder</span>
+                                    <div class="card-holder-name">full name</div>
+                                </div>
+                                <div class="box">
+                                    <span>expires</span>
+                                    <div class="expiration">
+                                        <span class="exp-month">mm</span>
+                                        <span class="exp-year">yy</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="back">
+                            <div class="stripe"></div>
+                            <div class="box">
+                                <span>cvv</span>
+                                <div class="cvv-box"></div>
+                                <img src="./assets/visa.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Credit Card -->
+                <form action="text">
+                    <div class="inputBox">
+                        <span>card number</span>
+                        <input type="text" maxlength="16" class="card-number-input">
+                    </div>
+                    <div class="inputBox">
+                        <span>card holder</span>
+                        <input type="text" maxlength="25" class="card-holder-input">
+                    </div>
+                    <div class="flexbox">
+                        <div class="inputBox">
+                            <span>expiration mm</span>
+                            <select name="" id="" class="month-input">
+                                <option value="month" selected disabled>month</option>
+                                <option value="01">01</option>
+                                <option value="02">02</option>
+                                <option value="03">03</option>
+                                <option value="04">04</option>
+                                <option value="05">05</option>
+                                <option value="06">06</option>
+                                <option value="07">07</option>
+                                <option value="08">08</option>
+                                <option value="09">09</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                            </select>
+                        </div>
+                        <div class="inputBox">
+                            <span>expiration yy</span>
+                            <select name="" id="" class="year-input">
+                                <option value="year" selected disabled>year</option>
+                                <option value="2021">2021</option>
+                                <option value="2022">2022</option>
+                                <option value="2023">2023</option>
+                                <option value="2024">2024</option>
+                                <option value="2025">2025</option>
+                                <option value="2026">2026</option>
+                                <option value="2027">2027</option>
+                                <option value="2028">2028</option>
+                                <option value="2029">2029</option>
+                                <option value="2030">2030</option>
+                            </select>
+                        </div>
+                        <div class="inputBox">
+                            <span>cvv</span>
+                            <input type="text" maxlength="4" class="cvv-input">
+                        </div>
+                    </div>
+                    <button>Login</button>
+                    <div class="column2">
+
+                        <img src="https://futureofedu.co/wp-content/uploads/2021/10/icfa-zoom-live.jpg" alt="5556"
+                            class="signup-image">
+                    </div>
+            </div>
+            <!--Footer -->
+            <div class="footersize">
+                <div class="footertodo">
+                    <footer class="footer section">
+                        <div class="footer__container container grid">
+                            <div>
+                                <a href="../../index.html" class="footer__logo">
+                                    <img src="../../assets/img/logo.png" alt="" class="footer__logo-img">
+                                    Study
+                                </a>
+
+                                <p class="footer__description">
+                                    Study help <br> for everyone!
+                                </p>
+                            </div>
+
+                            <div>
+                                <h3 class="footer__title">Our Services</h3>
+
+                                <ul class="footer__links">
+                                    <li>
+                                        <a href="../../flashcards/index.html" class="footer__link">Cards</a>
+                                    </li>
+                                    <li>
+                                        <a href="../../todo/index.html" class="footer__link ">To Do</a>
+                                    </li>
+                                    <li>
+                                        <a href="../../calculator-main/index.html" class="footer__link">Calculator</a>
+                                    </li>
+                                    <li>
+                                        <a href="../../impressions/index.html" class="footer__link">Views</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h3 class="footer__title">Support</h3>
+                                <ul class="footer__links">
+                                    <li>
+                                        <a href="../../faq/index.html" class="footer__link">FAQs</a>
+                                    </li>
+                                    <li>
+                                        <a href="../index.html" class="footer__link active-links">Sign up</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <img src="../../assets/img/footer2.png" alt="" class=" footer__img1">
+                            <img src="../../assets/img/footer1.png" alt="" class="footer__img2">
+                        </div>
+                        <span class="footer__copy"></span>
+                    </footer>
+                </div>
+            </div>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
+                integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8"
+                crossorigin="anonymous">
+            </script>
+            <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+                integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+                crossorigin="anonymous">
+            </script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"
+                integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"
+                crossorigin="anonymous">
+            </script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"
+                integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1"
+                crossorigin="anonymous">
+            </script>
+
+            <script src="./script/app.js"></script>
+            <!--=============== SCROLL REVEAL ===============-->
+            <script src="../../assets/js/scrollreveal.min.js"></script>
+
+            <!--=============== SWIPER JS ===============-->
+            <script src="../../assets/js/swiper-bundle.min.js"></script>
+
+            <!--=============== MAIN JS ===============-->
+            <script src="../../assets/js/main.js"></script>
+</body>
+
+</html>
