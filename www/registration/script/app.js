@@ -45,8 +45,8 @@ function checkEmail(input) {
 
 // Check if email is valid
 function checkTelefon(input) {
-    const regExp = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/;
-    if (regExp.test(input.value.trim())) {
+    const re = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/;
+    if (re.test(input.value.trim())) {
         showSuccess(input);
     } else {
         showError(input,'Phonenumber is not valid');
@@ -93,9 +93,7 @@ form.addEventListener("submit", function(e) {
     checkLength(password, 6, 25);
     checkLength(telefon, 13, 15);
     checkEmail(email);
-    checkUsername(username);
-    checkFirstname(firstname);
-    if (password.value !== "") {
+    if (passwordRepeat.value !== "") {
         checkPasswordsMatch(password, passwordRepeat);
     }
 });

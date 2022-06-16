@@ -59,7 +59,7 @@ function validateUser(userObj) {
     result = validateLib.checkPassword("password", userObj.password);
     if (result.isNotValid) { return result; }
 
-    //check passwordRepeat
+    //check passwortRepeat
     result = validateLib.checkPasswordsMatch("passwordRepeat", userObj.passwordRepeat);
     if (result.isNotValid) { return result; }
 

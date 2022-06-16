@@ -9,6 +9,7 @@ Der Server dient zu Übung zur Validierung von Benutzereingaben im Backend.
 let express = require("express");
 let bodyParser = require("body-parser");
 let app     = express();
+
 const { v4: uuidv4 } = require('uuid');
 const UserRepository = require('./UserRepository');
 const Validation = require('./ValidationService');
@@ -44,7 +45,9 @@ app.get('/test1', (req, res) => {
 app.use(bodyParser.json());
 // support encoded bodies
 app.use(bodyParser.urlencoded({ extended: true }));
-
+/*  1. Writing to file
+    https://stackabuse.com/reading-and-writing-json-files-with-node-js/
+ */
 app.post('/register', (req, res) => {
 
     const HTTP_STATUS_NO_ACCEPTABLE = 406;
@@ -58,6 +61,7 @@ app.post('/register', (req, res) => {
         "password": req.body.user.password,
         "passwordRepeat": req.body.user.passwordRepeat
     }
+
     let result = Validation.validateUser(userObj);
     if (result.isNotValid) {
         res.status(HTTP_STATUS_NO_ACCEPTABLE).send(result.msg);
