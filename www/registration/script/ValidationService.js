@@ -17,7 +17,7 @@ function validateUser(userObj) {
     result = validateLib.checkRequired("email", userObj.email);
     if (result.isNotValid) { return result; }
 
-        result = validateLib.checkRequired("telefon", userObj.telefon);
+    result = validateLib.checkRequired("telefon", userObj.telefon);
     if (result.isNotValid) { return result; }
 
     result = validateLib.checkRequired("password", userObj.password);
@@ -59,7 +59,7 @@ function validateUser(userObj) {
     result = validateLib.checkPassword("password", userObj.password);
     if (result.isNotValid) { return result; }
 
-    //check passwortRepeat
+    //check passwordRepeat
     result = validateLib.checkPasswordsMatch("passwordRepeat", userObj.passwordRepeat);
     if (result.isNotValid) { return result; }
 

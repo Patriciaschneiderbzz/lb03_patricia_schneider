@@ -22,16 +22,15 @@ function checkUsername(id,input) {
         isNotValid: false,
         msg: showSuccess(id)
     }
-    const re = /^[a-z ,.'-]+$/i;
+    const re = /^(?=[a-zA-Z0-9._]{8,20}$)(?!.*[_.]{2})[^_.].*[^_.]$/;
     if (!re.test(input.trim())) {
         result = {
             isNotValid: true,
-            msg: showError(id, 'Username is not valid')
+            msg: showError(id, 'Firstname is not valid')
         }
     }
     return result;
 }
-
 // Check Firstname is valid
 function checkFirstname(id,input) {
     //Default: is valid
@@ -101,14 +100,14 @@ function checkRequired(id, input) {
     //return validation result
     return result;
 }
-// Check email is valid
+// Check Password is valid
 function checkPassword(id,input) {
     //Default: is valid
     let result = {
         isNotValid: false,
         msg: showSuccess(id)
     }
-    const re = "^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$";
+    const re = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
     if (!re.test(input.trim())) {
         result = {
             isNotValid: true,
@@ -125,7 +124,7 @@ function checkPasswordsMatch(id,input) {
         isNotValid: false,
         msg: showSuccess(id)
     }
-    const re = "^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$";
+    const re = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
     if (!re.test(input.trim())) {
         result = {
             isNotValid: true,
@@ -163,10 +162,10 @@ function checkLength(id, input, min, max) {
  *  function to export WITHOUT brackets!
  */
 module.exports = {
+    checkUsername,
     checkEmail,
     checkLength,
     checkRequired,
-    checkUsername,
     checkFirstname,
     checkTelefon,
     checkPassword,

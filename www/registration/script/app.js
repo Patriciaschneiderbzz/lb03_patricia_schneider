@@ -1,6 +1,5 @@
 // read elements
-const {checkFirstname} = require("./ValidationLib");
-const {checkUsername} = require("./ValidationLib");
+
 const form = document.getElementById("form");
 const username = document.getElementById("username");
 const firstname = document.getElementById("firstname");
@@ -46,8 +45,8 @@ function checkEmail(input) {
 
 // Check if email is valid
 function checkTelefon(input) {
-    const swiss = /^(?:(?:|0{1,2}|\+{0,2})41(?:|\(0\))|0)([1-9]\d)(\d{3})(\d{2})(\d{2})$/;
-    if (swiss.test(input.value.trim())) {
+    const regExp = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/;
+    if (regExp.test(input.value.trim())) {
         showSuccess(input);
     } else {
         showError(input,'Phonenumber is not valid');
