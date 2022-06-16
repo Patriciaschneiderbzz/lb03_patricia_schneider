@@ -1,0 +1,19 @@
+{
+	"folders": [
+		{
+			"path": "../../../OneDrive - Bildungszentrum Zürichsee/lb02M273/studyhelp/calculator-main"
+		},
+		{
+			"path": "../../../OneDrive - Bildungszentrum Zürichsee/lb02M273/studyhelp/flashcards"
+		},
+		{
+			"path": "../../../OneDrive - Bildungszentrum Zürichsee/lb02M273/studyhelp/www"
+		},
+		{
+			"path": "../../../OneDrive - Bildungszentrum Zürichsee/lb02M273/studyhelp/assets"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "calculator-main"
+	}
+}

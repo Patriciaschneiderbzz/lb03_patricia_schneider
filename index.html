@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+    <link rel="stylesheet" href="./assets/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+
+    <title>Studyhelp</title>
+</head>
+
+<body>
+    <!--==================== HEADER ====================-->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="./index.html" class="nav__logo">
+                <img src="./assets/img/logo.png" alt="" class="nav__logo-img">
+                Study
+            </a>
+
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="#home" class="nav__link active-link">Home</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#celebrate" class="nav__link">Courses</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#gift" class="nav__link">FAQ</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#new" class="nav__link">Methods</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#impressions" class="nav__link">Views</a>
+                    </li>
+                    <div class="nav__close" id="nav-close">
+                        <i class='bx bx-x'></i>
+                    </div>
+
+                    <li>
+                        <!-- Theme change button -->
+                        <i class='bx bx-moon change-theme' id="theme-button"></i></li>
+                    </li>
+
+
+                    <img src="./assets/img/nav-light.png" alt="" class="nav__img">
+            </div>
+            <div class="nav__btns">
+
+
+                <!-- Toggle button -->
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class='bx bx-grid-alt'></i>
+                </div>
+            </div>
+            </ul>
+        </nav>
+    </header>
+    <div class="newest">
+        <!--==================== MAIN ====================-->
+        <main class="main">
+            <!--==================== HOME ====================-->
+            <section class="home" id="home">
+                <div class="home__container container grid">
+                    <img src="assets/img/home.png" alt="" class="home__img">
+
+                    <div class="home__data">
+                        <h1 class="home__title">Study help<br> for everyone!</h1>
+                        <p class="home__description">
+                            With this new website you can study wherever and whenever. You have all of your essentials
+                            right
+                            by your side.
+                        </p>
+
+                        <h1 class="home__title" onclick="changeText(this)">Welcome to our<br> website!</h1>
+                        <script>
+                            function changeText(id) {
+                                id.innerHTML = "We hope to see you soon!";
+                            }
+                        </script>
+                        <a href="#celebrate" class="button">Get Started</a>
+                    </div>
+                </div>
+            </section>
+
+            <!--==================== GIVING ====================-->
+            <section class="giving section container" id="celebrate">
+                <h2 class="section__title">
+                    Explore our <br> different courses
+                </h2>
+
+                <div class="giving__container grid">
+                    <div class="giving__content">
+                        <a href="./flashcards/index.html">
+                            <img src="assets/img/gift2.png" alt="" class="giving__img">
+                            <h3 class="giving__title">Repetitive work</h3>
+                            <p class="giving__description">The brain can memorize everything way better, when using
+                                flashcards.
+                            </p>
+                        </a>
+                    </div>
+
+                    <div class="giving__content">
+                        <a href="./todo/index.html">
+                            <img src="assets/img/giving2.png" alt="" class="giving__img">
+                            <h3 class="giving__title">Organisation</h3>
+                            <p class="giving__description">Keep track of all of our courses</p>
+                        </a>
+                    </div>
+
+                    <div class="giving__content">
+                        <a href="./calculator-main/index.html">
+                            <img src="assets/img/giving3.png" alt="" class="giving__img">
+                            <h3 class="giving__title">Calculator</h3>
+                            <p class="giving__description">Help with any mathematic problems.</p>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!--==================== CELEBRATE ====================-->
+            <section class="celebrate section container" id="gift">
+                <div class="celebrate__container grid">
+                    <div class="celebrate__data">
+                        <h2 class="section__title celebrate__title">
+                            Do you have any<br> burning questions?
+                        </h2>
+                        <p class="celebrate__description">
+                            If so don't hesitate to contact our HR. Or read trough the FAQ's and maybe you will already
+                            find
+                            your answer.
+                        </p>
+                        <a href="./faq/index.html" class="button">Get your answers here</a>
+                    </div>
+
+                    <img src="assets/img/celebrate.png" alt="" class="celebrate__img">
+                </div>
+            </section>
+
+            <!--==================== GIFT ====================-->
+            <section class="gift section container" id="new">
+                <h2 class="section__title">Join a course</h2>
+                <p class="text">In order to participate in one of these courses, please contact HR</p>
+                <div class="gift__container grid">
+                    <article class="gift__card">
+                        <img src="assets/img/gift1.png" alt="" class="gift__img">
+                        <i class='bx bx-heart gift__icon'></i>
+
+                        <h3 class="gift__price">$15</h3>
+                        <span class="gift__title">Compressor</span>
+                    </article>
+
+                    <article class="gift__card">
+                        <img src="assets/img/giving2.png" alt="" class="gift__img">
+                        <i class='bx bx-heart gift__icon'></i>
+
+                        <h3 class="gift__price">$22</h3>
+                        <span class="gift__title">Key learnings</span>
+                    </article>
+
+                    <article class="gift__card">
+                        <img src="assets/img/gift3.png" alt="" class="gift__img">
+                        <i class='bx bx-heart gift__icon'></i>
+
+                        <h3 class="gift__price">$48</h3>
+                        <span class="gift__title">Time management</span>
+                    </article>
+
+                    <article class="gift__card">
+                        <img src="assets/img/gift4.png" alt="" class="gift__img">
+                        <i class='bx bx-heart gift__icon'></i>
+
+                        <h3 class="gift__price">$35</h3>
+                        <span class="gift__title">Text understanding</span>
+                    </article>
+
+                    <article class="gift__card">
+                        <img src="assets/img/gift5.png" alt="" class="gift__img">
+                        <i class='bx bx-heart gift__icon'></i>
+
+                        <h3 class="gift__price">$12</h3>
+                        <span class="gift__title">Videography</span>
+                    </article>
+                </div>
+            </section>
+
+            <!--==================== NEW ====================-->
+            <section class="new section container" id="new">
+                <h2 class="section__title">Study methods</h2>
+
+                <div class="new__container">
+                    <div class="swiper new-swiper">
+                        <div class="swiper-wrapper">
+                            <article class="new__card swiper-slide">
+                                <div class="new__overlay"></div>
+
+                                <img src="assets/img/new1.png" alt="" class="new__img">
+
+                                <span class="new__title">Analytics</span>
+
+                                <button class="button new__button">
+                                    <i class='bx bx-heart new__icon'></i>
+                                </button>
+                            </article>
+
+                            <article class="new__card swiper-slide">
+                                <div class="new__overlay"></div>
+
+                                <img src="assets/img/new2.png" alt="" class="new__img">
+                                <span class="new__title">Coding</span>
+
+                                <button class="button new__button">
+                                    <i class='bx bx-heart new__icon'></i>
+                                </button>
+                            </article>
+
+                            <article class="new__card swiper-slide">
+                                <div class="new__overlay"></div>
+
+                                <img src="assets/img/new3.png" alt="" class="new__img">
+                                <span class="new__title">Sketching</span>
+
+                                <button class="button new__button">
+                                    <i class='bx bx-heart new__icon'></i>
+                                </button>
+                            </article>
+
+                            <article class="new__card swiper-slide">
+                                <div class="new__overlay"></div>
+
+                                <img src="assets/img/new4.png" alt="" class="new__img">
+                                <span class="new__title">Translation</span>
+
+                                <button class="button new__button">
+                                    <i class='bx bx-heart new__icon'></i>
+                                </button>
+                            </article>
+                        </div>
+
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+            </section>
+
+            <!--==================== CELEBRATE ====================-->
+            <section class="celebrate section container" id="impressions">
+                <div class="celebrate__container grid">
+                    <div class="celebrate__data">
+                        <h2 class="section__title celebrate__title">
+                            Meet a few of our<br>typical clients.
+                        </h2>
+                        <p class="celebrate__description">
+                            If you are still struggeling to decide if you want to take place in one of our courses than
+                            get
+                            to know a few of our clients.
+                        </p>
+                        <a href="impressions/index.html" class="button">Read the impressions</a>
+                    </div>
+
+                    <img src="assets/img/business.png" alt="" class="celebrate__img">
+                </div>
+            </section>
+
+
+            <!--==================== MESSAGE ====================-->
+
+            <section class="message section container">
+                <div class="message__container grid">
+                    <form action="" class="message__form">
+                        <h2 class="message__title">Please click here to write <br> your Email!</h2>
+                        <input type="text" placeholder="Write your message" class="message__input">
+                        <button class="button message__button"><a href="mailto:schneiderp@bzz.ch">Open
+                                mail</button></a>
+                    </form> <img src="assets/img/message.png" alt="case" class="message__img">
+                </div>
+            </section>
+        </main>
+    </div>
+    <!--==================== FOOTER ====================-->
+    <div class="footersize">
+        <div class="footertodo">
+            <footer class="footer section">
+                <div class="footer__container container grid">
+                    <div>
+                        <a href="./index.html" class="footer__logo">
+                            <img src="./assets/img/logo.png" alt="" class="footer__logo-img">
+                            Study
+                        </a>
+
+                        <p class="footer__description">
+                            Study help <br> for everyone!
+                        </p>
+                    </div>
+
+                    <div>
+                        <h3 class="footer__title">Our Services</h3>
+
+                        <ul class="footer__links">
+                            <li>
+                                <a href="./flashcards/index.html" class="footer__link">Cards</a>
+                            </li>
+                            <li>
+                                <a href="./todo/index.html" class="footer__link">To Do</a>
+                            </li>
+                            <li>
+                                <a href="./calculator-main/index.html" class="footer__link">Calculator</a>
+                            </li>
+                            <li>
+                                <a href="./impressions/index.html" class="footer__link">View</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h3 class="footer__title">Support</h3>
+
+                        <ul class="footer__links">
+                            <li>
+                                <a href="./faq/index.html" class="footer__link">FAQs</a>
+                            </li>
+                            <li>
+                                <a href="./www/index.html" class="footer__link">Sign up</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <img src="./assets/img/footer2.png" alt="" class=" footer__img1">
+                    <img src="./assets/img/footer1.png" alt="" class="footer__img2">
+                </div>
+
+                <span class="footer__copy"></span>
+            </footer>
+        </div>
+    </div>
+
+    <!--=============== SCROLL UP ===============-->
+    <a href="#" class="scrollup" id="scroll-up">
+        <i class='bx bx-up-arrow-alt scrollup__icon'></i>
+    </a>
+
+    <!--=============== SCROLL REVEAL ===============-->
+    <script src="assets/js/scrollreveal.min.js"></script>
+
+    <!--=============== SWIPER JS ===============-->
+    <script src="assets/js/swiper-bundle.min.js"></script>
+
+    <!--=============== MAIN JS ===============-->
+    <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
