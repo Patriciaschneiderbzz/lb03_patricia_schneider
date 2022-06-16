@@ -56,7 +56,7 @@ function checkEmail(id,input) {
         isNotValid: false,
         msg: showSuccess(id)
     }
-    const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     if (!re.test(input.trim())) {
         result = {
             isNotValid: true,
@@ -82,8 +82,6 @@ function checkTelefon(id,input) {
     }
     return result;
 }
-//TODO: Check article for throwing errors in node js
-// https://stackoverflow.com/questions/33086247/throwing-an-error-in-node-js
 
 // Check required fields
 function checkRequired(id, input) {
@@ -110,6 +108,7 @@ function checkPassword(id,input) {
         isNotValid: false,
         msg: showSuccess(id)
     }
+    const re = "^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$";
     if (!re.test(input.trim())) {
         result = {
             isNotValid: true,
@@ -119,13 +118,14 @@ function checkPassword(id,input) {
     return result;
 }
 
-// Check email is valid
+// Check PasswordRepeat is valid
 function checkPasswordsMatch(id,input) {
     //Default: is valid
     let result = {
         isNotValid: false,
         msg: showSuccess(id)
     }
+    const re = "^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$";
     if (!re.test(input.trim())) {
         result = {
             isNotValid: true,

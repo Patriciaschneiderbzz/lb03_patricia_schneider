@@ -39,19 +39,6 @@ function validateUser(userObj) {
     result = validateLib.checkLength("passwordRepeat", userObj.passwordRepeat, 6, 25);
     if (result.isNotValid) { return result; }
 
-
-    //check password
-    result = validateLib.checkPassword("password", userObj.password);
-    if (result.isNotValid) { return result; }
-
-    //check passwortRepeat
-    result = validateLib.checkPasswordsMatch("passwordRepeat", userObj.passwordRepeat);
-    if (result.isNotValid) { return result; }
-
-    //all inputs are valid and isNotValid=false
-    return false;
-}
-
     //check email syntax
     result = validateLib.checkEmail("email", userObj.email);
     if (result.isNotValid) { return result; }
@@ -68,9 +55,17 @@ function validateUser(userObj) {
     result = validateLib.checkTelefon("telefon", userObj.telefon);
     if (result.isNotValid) { return result; }
 
-    //check phone syntax
+    //check password
+    result = validateLib.checkPassword("password", userObj.password);
+    if (result.isNotValid) { return result; }
 
+    //check passwortRepeat
+    result = validateLib.checkPasswordsMatch("passwordRepeat", userObj.passwordRepeat);
+    if (result.isNotValid) { return result; }
 
+    //all inputs are valid and isNotValid=false
+    return false;
+}
 /**
  *  Export validation functions for further usage.
  *  function to export WITHOUT beackets!

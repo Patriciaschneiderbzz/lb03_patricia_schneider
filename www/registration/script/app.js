@@ -49,11 +49,11 @@ function checkTelefon(id,input) {
         isNotValid: false,
         msg: showSuccess(id)
     }
-    const re = /^(?:(?:|0{1,2}|\+{0,2})41(?:|\(0\))|0)([1-9]\d)(\d{3})(\d{2})(\d{2})$/;
-    if (!re.test(input.trim())) {
+    const swiss = /^(?:(?:|0{1,2}|\+{0,2})41(?:|\(0\))|0)([1-9]\d)(\d{3})(\d{2})(\d{2})$/;
+    if (!swiss.test(input.trim())) {
         result = {
             isNotValid: true,
-            msg: showError(id, 'telefon is not valid')
+            msg: showError(id, 'Phonenumber is not valid')
         }
     }
     return result;
