@@ -44,13 +44,11 @@ app.get('/test1', (req, res) => {
 app.use(bodyParser.json());
 // support encoded bodies
 app.use(bodyParser.urlencoded({ extended: true }));
-/*  1. Writing to file
-    https://stackabuse.com/reading-and-writing-json-files-with-node-js/
- */
+
 app.post('/register', (req, res) => {
 
     const HTTP_STATUS_NO_ACCEPTABLE = 406;
-    //Daten des Posts-Requests auslesen und zusätzlich eine User-id erzeugen
+    //Post request
     let userObj = {
         "id": uuidv4(),
         "username": req.body.user.username,
@@ -64,7 +62,7 @@ app.post('/register', (req, res) => {
     if (result.isNotValid) {
         res.status(HTTP_STATUS_NO_ACCEPTABLE).send(result.msg);
     } else {
-        //Speicherung des neuen Benutzers
+        //Save new user
         let userRepo = new UserRepository(registrationFile);
         userRepo.read()
             .then((data) => {
