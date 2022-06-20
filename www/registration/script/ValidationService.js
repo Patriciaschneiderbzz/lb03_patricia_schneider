@@ -6,8 +6,8 @@ const validateLib = require('./ValidationLib');
  * @param userObj
  * @returns {boolean|{msg: string, isNotValid: boolean}|{isNotValid}|*}
  */
+// Check required fields
 function validateUser(userObj) {
-    // Check required fields
     let result = validateLib.checkRequired("username", userObj.username);
     if (result.isNotValid) { return result; }
 
@@ -51,7 +51,7 @@ function validateUser(userObj) {
     result = validateLib.checkFirstname("firstname", userObj.firstname);
     if (result.isNotValid) { return result; }
 
-        //check phone syntax
+    //check phone syntax
     result = validateLib.checkTelefon("telefon", userObj.telefon);
     if (result.isNotValid) { return result; }
 

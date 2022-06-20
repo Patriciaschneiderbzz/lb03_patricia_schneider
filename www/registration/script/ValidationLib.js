@@ -94,12 +94,12 @@ function checkRequired(id, input) {
         //.. then it's not valid
         result = {
             isNotValid: true,
-            msg: showError(id, `${input.toString()} is required`)
+            msg: showError(id, `${input.toString()}is not valid`)
         }
     }
-    //return validation result
     return result;
 }
+
 // Check Password is valid
 function checkPassword(id,input) {
     //Default: is valid
@@ -162,10 +162,10 @@ function checkLength(id, input, min, max) {
  *  function to export WITHOUT brackets!
  */
 module.exports = {
-    checkUsername,
     checkEmail,
     checkLength,
     checkRequired,
+    checkUsername,
     checkFirstname,
     checkTelefon,
     checkPassword,

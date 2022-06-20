@@ -91,7 +91,7 @@ form.addEventListener("submit", function(e) {
     checkLength(username, 3, 15);
     checkLength(firstname, 2, 15);
     checkLength(password, 6, 25);
-    checkLength(telefon, 13, 15);
+    checkLength(telefon, 10, 15);
     checkEmail(email);
     if (passwordRepeat.value !== "") {
         checkPasswordsMatch(password, passwordRepeat);
