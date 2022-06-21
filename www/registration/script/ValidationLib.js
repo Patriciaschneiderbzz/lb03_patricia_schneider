@@ -31,6 +31,7 @@ function checkUsername(id,input) {
     }
     return result;
 }
+
 // Check Firstname is valid
 function checkFirstname(id,input) {
     //Default: is valid
