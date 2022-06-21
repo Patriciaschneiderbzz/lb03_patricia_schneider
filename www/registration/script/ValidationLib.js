@@ -129,7 +129,7 @@ function checkPasswordsMatch(id,input) {
     if (!re.test(input.trim())) {
         result = {
             isNotValid: true,
-            msg: showError(id, 'Passwords don\'t match')
+            msg: showError(id, 'PasswordRepeat is not valid')
         }
     }
     return result;

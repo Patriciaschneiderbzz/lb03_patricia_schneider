@@ -25,5 +25,50 @@
     "telefon": "+41791991799",
     "password": "Sonnenschein123",
     "passwordRepeat": "Sonnenschein123"
+  },
+  {
+    "id": "0fac5ce6-6f7d-4e23-a72a-61f6e3d84ef5",
+    "username": "Olivia_sun",
+    "firstname": "Oliviera",
+    "email": "pfadimh@gmail.com",
+    "telefon": "+41791991799",
+    "password": "Sonnenschein123",
+    "passwordRepeat": "Sonnenschein123"
+  },
+  {
+    "id": "9c6c4a58-04c6-4069-acce-c66bcb900711",
+    "username": "Olivia_sun",
+    "firstname": "Oliviera",
+    "email": "pfadimh@gmail.com",
+    "telefon": "+41791991799",
+    "password": "Sonnenschein123",
+    "passwordRepeat": "Sonnenschein12"
+  },
+  {
+    "id": "6e5de7a9-1a2a-4645-992e-3f78ee5ff110",
+    "username": "Olivia_sun",
+    "firstname": "Oliviera",
+    "email": "pfadimh@gmail.com",
+    "telefon": "+41791991799",
+    "password": "Sonnenschein123",
+    "passwordRepeat": "Sonnenschein123"
+  },
+  {
+    "id": "bf2ceb6f-03b5-4a52-baf7-5f05a11af57e",
+    "username": "Olivia_sun",
+    "firstname": "Oliviera",
+    "email": "pfadimh@gmail.com",
+    "telefon": "+41791991799",
+    "password": "Skkkkkk12",
+    "passwordRepeat": "kkkkkkk12"
+  },
+  {
+    "id": "ec0fb73f-c83e-4dd7-b61e-ed5a7b8ba18f",
+    "username": "Olivia_sun",
+    "firstname": "Oliviera",
+    "email": "pfadimh@gmail.com",
+    "telefon": "+41791991799",
+    "password": "Skkkkkk12",
+    "passwordRepeat": "Skkkkkkk23"
   }
 ]

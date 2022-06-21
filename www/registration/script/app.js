@@ -24,13 +24,15 @@ function showSuccess(input) {
 
 // Check required fields
 function checkRequired(inputArr) {
+    let isRequired = false;
     inputArr.forEach(function(input) {
         if (input.value === "") {
             showError(input, `${getFieldName(input)} is required`);
         } else {
             showSuccess(input);
         }
-    });
+    })
+    return isRequired;
 }
 
 // Check if email is valid
@@ -45,11 +47,29 @@ function checkEmail(input) {
 
 // Check if email is valid
 function checkTelefon(input) {
-    const re = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/;
+    const re = /(\b(0041|0)|\B\+41)(\s?\(0\))?(\s)?[1-9]{2}(\s)?[0-9]{3}(\s)?[0-9]{2}(\s)?[0-9]{2}\b/;
     if (re.test(input.value.trim())) {
         showSuccess(input);
     } else {
         showError(input,'Phonenumber is not valid');
+    }
+}
+
+function checkFirstname(input) {
+    const re = /^[a-z ,.'-]+$/i;
+    if (re.test(input.value.trim())) {
+        showSuccess(input);
+    } else {
+        showError(input,'Firstname is not valid');
+    }
+}
+
+function checkPassword(input) {
+    const re = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
+    if (re.test(input.value.trim())) {
+        showSuccess(input);
+    } else {
+        showError(input,'Password is not valid');
     }
 }
 
@@ -83,20 +103,27 @@ function getFieldName(input) {
 }
 
 // Event listeners
-form.addEventListener("submit", function(e) {
+form.addEventListener('submit', function(e) {
     e.preventDefault();
+    validateForm();
+});
 
 // Validate form input elements
-    checkRequired([username, firstname, email, telefon, password, passwordRepeat]);
-    checkLength(username, 3, 15);
-    checkLength(firstname, 2, 15);
-    checkLength(password, 6, 25);
-    checkLength(telefon, 10, 15);
-    checkEmail(email);
-    if (passwordRepeat.value !== "") {
-        checkPasswordsMatch(password, passwordRepeat);
+function validateForm() {
+    if (!checkRequired([username, firstname, email, telefon, password, passwordRepeat])) {
+        checkLength(username, 3, 15);
+        checkLength(firstname, 2, 15);
+        checkLength(password, 6, 25);
+        checkLength(telefon, 10, 15);
+        checkEmail(email);
+        checkTelefon(telefon);
+        checkFirstname(firstname);
+        checkPassword(password, passwordRepeat);
+        if (passwordRepeat.value !== "") {
+            checkPasswordsMatch(password, passwordRepeat);
+        }
     }
-});
+}
 
 // Validate Creditcard
          document.querySelector('.card-number-input').oninput = () => {
